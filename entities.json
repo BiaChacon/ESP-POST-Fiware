@@ -1,0 +1,58 @@
+{
+ "id":"urn:ngsi-ld:Node:001", 
+    "type":"Node",
+    "name":{
+          "type":"Text", 
+          "value":"Sensor"
+    },
+    "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [
+                    -35.21142035722732,
+                    -5.855876886043651
+                ]
+            }
+    }
+}
+
+{
+    "id":"urn:ngsi-ld:Sensor:001", 
+    "type":"Sensor",
+    "name":{
+          "type":"Text", 
+          "value":"Sensor"
+    },
+    "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [
+                    -35.21140694618225,
+                    -5.8558822224684075
+                ]
+            }
+    },
+    "refNode": {
+        "type": "Relationship",
+        "value": "urn:ngsi-ld:Node:001"
+    }
+}
+
+{
+  "id": "urn:ngsi-ld:Temperatura:001",
+  "type": "Temperatura",
+  "name": {
+    "type": "Text",
+    "value": "Temperatura"
+  },
+  "temp": {
+    "type": "Float",
+    "value": "23.1"
+  },
+  "refSensor": {
+    "type": "Relationship",
+    "value": "urn:ngsi-ld:Sensor:001"
+  }
+}
