@@ -1,17 +1,36 @@
 {
- "id":"urn:ngsi-ld:Node:001", 
-    "type":"Node",
+ "id":"urn:ngsi-ld:Region:001", 
+    "type":"Region",
     "name":{
           "type":"Text", 
-          "value":"Sensor"
+          "value":"Predio Informatica"
     },
     "location": {
             "type": "geo:json",
             "value": {
                 "type": "Point",
                 "coordinates": [
-                    -35.21142035722732,
-                    -5.855876886043651
+                    -35.363729596138,
+        			-5.8865338037919885
+                ]
+            }    
+    }
+}
+
+{
+ "id":"urn:ngsi-ld:Node:001", 
+    "type":"Node",
+    "name":{
+          "type":"Text", 
+          "value":"Node 1"
+    },
+    "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [
+                    -35.36349892616272,
+        			-5.88667787931516
                 ]
             }
     }
@@ -22,15 +41,16 @@
     "type":"Sensor",
     "name":{
           "type":"Text", 
-          "value":"Sensor"
+          "value":"Sensor 1"
     },
     "location": {
             "type": "geo:json",
             "value": {
                 "type": "Point",
                 "coordinates": [
-                    -35.21140694618225,
-                    -5.8558822224684075
+                   -35.36349892616272,
+        			-5.886645862535457
+
                 ]
             }
     },
