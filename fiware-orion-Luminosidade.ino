@@ -3,7 +3,7 @@
 #include <ArduinoJson.h>
 
 int ldr = A0; 
-int luz = 0; 
+int luz = 0;
 
 char luminosidade[5];
 
@@ -13,7 +13,7 @@ const char* wifiPass = "";
 const char* host= "http://10.77.12.123:1026/v2/entities";
 
 char idNode[80];
-char nomeNode[13] = "Luminosidade";
+char nomeNode[15] = "Luminosidade";
 int cont = 1;
 
 
@@ -49,7 +49,7 @@ void loop() {
  
     sprintf(idNode, "urn:ngsi-ld:%s:%03i", nomeNode, cont++);
     
-    luz = analogRead(ldr); 
+    luz = analogRead(ldr);
     sprintf(luminosidade, "%i", luz); 
 
     StaticJsonBuffer<300> JSONbuffer;
@@ -63,9 +63,9 @@ void loop() {
     name["type"] = "Text";
     name["value"] = "Luminosidade";
 
-    JsonObject& luminosidade = root.createNestedObject("lumisosidade");
-    luminosidade["type"] = "Int";
-    luminosidade["value"] = luminosidade;
+    JsonObject& lum = root.createNestedObject("lum");
+    lum["type"] = "Int";
+    lum["value"] = luminosidade;
     
     JsonObject& refSensor = root.createNestedObject("refSensor");
     refSensor["type"] = "Relationship";
